@@ -1,0 +1,3 @@
+SAMPLE Application
+===
+Spring Boot
