@@ -3,6 +3,7 @@ package com.japharr.demo.service;
 import com.japharr.demo.entity.Book;
 import com.japharr.demo.repository.BookRepository;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class BookServiceTest {
     @Autowired
     private BookRepository bookRepository;
 
-    @AfterAll
+    @AfterEach
     void clear() {
         bookRepository.deleteAll();
     }
@@ -36,8 +37,8 @@ public class BookServiceTest {
         List<Book> result = bookService.findAll();
         Book firstBook = result.get(0);
 
-        assertEquals(result.size(), 3);
-        assertEquals(firstBook.getId(), 2);
+        assertEquals(result.size(), 1);
+        assertEquals(firstBook.getId(), 1);
         assertEquals(firstBook.getTitle(), "How to Program, Java");
     }
 }
