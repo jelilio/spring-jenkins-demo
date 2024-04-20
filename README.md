@@ -1,1 +1,1 @@
-# A Simple Spring Application using Jenkins for CI/CD
+# A Spring Application using Jenkins for CI/CD
